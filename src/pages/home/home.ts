@@ -41,7 +41,7 @@ export class HomePage {
       this.runner = this.map.addMarkerSync({
         title: 'you',
         icon: { url: 'assets/art/runner.png'},
-        animation: 'DROP',
+        animation: 'null',
         position: {
             lat: 51.587432,
             lng: -0.319744
@@ -78,7 +78,7 @@ class Zombie {
     this.marker = map.addMarkerSync({
       title: 'zombie!',
       icon: { url: 'assets/art/zombie.png'},
-      animation: 'DROP',
+      animation: 'BOUNCE',
       position: this.position
     });
   }

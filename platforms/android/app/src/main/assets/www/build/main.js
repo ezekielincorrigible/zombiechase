@@ -65,7 +65,7 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.ionViewDidLoad = function () {
         var _this = this;
         this.loadMap();
-        console.log('roger');
+        // setup Observable to regularly execute gameloop
         var sub = __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].interval(1000).subscribe(function (val) { _this.gameloop(); });
         // sub.unsubscribe();
         // to stop it
@@ -85,7 +85,7 @@ var HomePage = /** @class */ (function () {
         this.runner = this.map.addMarkerSync({
             title: 'you',
             icon: { url: 'assets/art/runner.png' },
-            animation: 'DROP',
+            animation: 'null',
             position: {
                 lat: 51.587432,
                 lng: -0.319744
@@ -105,7 +105,6 @@ var HomePage = /** @class */ (function () {
         console.log(position);
         position.lat = position.lat + 0.0001;
         position.lng = position.lng + 0.0001;
-        console.log(position);
         this.runner.setPosition(position);
     };
     HomePage = __decorate([
@@ -125,7 +124,7 @@ var Zombie = /** @class */ (function () {
         this.marker = map.addMarkerSync({
             title: 'zombie!',
             icon: { url: 'assets/art/zombie.png' },
-            animation: 'DROP',
+            animation: 'BOUNCE',
             position: this.position
         });
     }
