@@ -1,0 +1,7 @@
+{
+  "name": "mapapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
